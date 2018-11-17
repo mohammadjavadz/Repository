@@ -21,3 +21,17 @@ Route::get('/', function () {
 
 Route::get('/repository/{id}','UserController@show');
 Route::get('/repository/{id}/insertcontact/{name}','UserController@insert');
+
+Route::get('/Adapter/Melli', function (){
+
+	$r = new App\Adapter\Person();
+	$r->payment(new \App\Adapter\MelliPay());
+
+});
+
+Route::get('/Adapter/Melat', function (){
+
+	$r = new App\Adapter\Person();
+	$r->payment(new \App\Adapter\Adapter(new \App\Adapter\MelatPay()));
+
+});

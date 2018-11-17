@@ -21,4 +21,8 @@ class UserController extends Controller
 	public function show( $id ) {
 		return $this->model->find($id);
 	}
+
+	public function insert( $id , $name ) {
+		return $this->model->insert($id, $name);
+	}
 }

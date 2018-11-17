@@ -21,4 +21,11 @@ class UserRepository implements UserRepositoryInterface {
 			echo '<br>';
 		}
 	}
+
+	public function insert( int $id , string $name) {
+		\App\User::find($id)->contacts()->create(['name'=>$name]);
+		echo 'کانتکت جدید اضافه شد';
+		echo '<br>';
+		echo $name;
+	}
 }

@@ -20,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/repository/{id}','UserController@show');
+Route::get('/repository/{id}/insertcontact/{name}','UserController@insert');

@@ -9,4 +9,5 @@ namespace App\Repository;
 
 interface UserRepositoryInterface {
 	public function find(int $id);
+	public function insert(int $id, string $name);
 }

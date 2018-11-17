@@ -18,3 +18,5 @@ Route::get('/', function () {
    	echo '<br>';
    }
 });
+
+Route::get('/repository/{id}','UserController@show');
